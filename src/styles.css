@@ -18,3 +18,8 @@ label {
     margin-bottom: 5px;
     font-weight: 100;
 }
+
+
+.outer-box{
+    min-height:200px;
+}
