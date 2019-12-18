@@ -1,0 +1,19 @@
+.one{
+    background: red;
+}
+.two{background: yellow;}
+
+.ui-grid-cell  img .btn {
+    
+      transition: transform .2s;
+    width:10px;
+    height: 10px;
+    }
+    
+    .ui-grid-cell img .btn:hover {
+      position: absolute;
+      -ms-transform: scale(1.5); /* IE 9 */
+      -webkit-transform: scale(1.5); /* Safari 3-8 */
+      transform: scale(1.5); 
+    }					
+    

@@ -1,0 +1,147 @@
+
+<div class="container-fluid">
+    
+            <div class="row">
+                <form #custForm="ngForm" (ngSubmit)="onSubmit(custForm)">
+                  
+                    <div class="col-sm-2">
+                        <div class="form-group has-feedback">
+                            <input type="text" class="form-control"
+                            name="CustId"
+                            ngModel
+                            placeholder="Customer ID"  >
+                            <span class="glyphicon glyphicon-user form-control-feedback" aria-hidden="true"></span>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="form-group has-feedback">
+                            <input type="text" class="form-control"
+                            name="CompanyName"
+                            ngModel
+                            placeholder="Company Name"  >
+                            <span class="glyphicon glyphicon-th form-control-feedback" aria-hidden="true"></span>
+                        </div>
+                    </div>
+            
+                    <div class="col-sm-1">
+                        <button class="btn btn-primary" [disabled]="!custForm.valid"><i class="fa fa-arrow-circle-o-right"></i> Get Details</button>
+                        <button type="button" name="" class="btn btn-primary" *ngIf="false">
+                            <i class="fa fa-cog fa-spin fa-fw" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+    
+    
+      
+        <div class="dash-box">
+            <div class="row">
+                <div class="col-sm-12">
+                        <ui-grid [data]="custData" [gridOptions]="gridOptions" (onEdit)="onEditFunction($event)"></ui-grid>
+                    <!-- <div class="table-responsive">
+                        <table class="table tbl">
+                            <thead>
+                                <tr>
+                                    <th class="text-center"><img class="img1 fleft img-circle" height="60" width="60" src="assets/img/male.png" /></th>
+                                    <th class="text-center">Delivery <br />Boy Name</th>
+                                    <th class="text-center">Mobile <br> No.</th>
+                                    <th class="text-center">Email <br />Id </th>
+                                    <th class="text-center">Total <br>Event</th>
+                                    <th class="text-center">Total <br>Count</th>
+                                    <th class="text-center">Less<br /> Count</th>
+                                    <th class="text-center">Equal <br />Count</th>
+                                    <th class="text-center">Excess <br />Count</th>
+                          
+                                   <th class="text-center">Details</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr >
+                                    <td class="text-center"><img class="img1 fleft img-circle" height="60" width="60" src="assets/img/male.png" /></td>
+                                    <td class="text-center">Abdul Shigalkar</td>
+                                    <td class="text-center">8686868686</td>
+                                    <td class="text-center">Abdulla@sanhitainfotech.com</td>
+                                    <td class="text-center">303</td>
+                                    <td class="text-center">7007</td>                                    
+                                    <td class="text-center">101</td>
+                                    <td class="text-center">606</td>
+                                    <td class="text-center">101</td>    
+                                   <td class="text-center"><a target="_blank"  data-toggle="modal" data-target="#myModal" class="btn btn-primary btn-xs"><i class="fa fa-eye" aria-hidden="true"></i> &nbsp;View</a></td>
+                                </tr>
+                                <tr >
+                                    <td class="text-center"><img class="img1 fleft img-circle" height="60" width="60" src="assets/img/male.png" /></td>
+                                    <td class="text-center">Hanna Abdul Shigalkar</td>
+                                    <td class="text-center">8686868686</td>
+                                    <td class="text-center">Abdulla@sanhitainfotech.com</td>
+                                    <td class="text-center">303</td>
+                                    <td class="text-center">7007</td>                                    
+                                    <td class="text-center">101</td>
+                                    <td class="text-center">606</td>
+                                    <td class="text-center">101</td>    
+                                   <td class="text-center"><a target="_blank"  data-toggle="modal" data-target="#myModal" class="btn btn-primary btn-xs"><i class="fa fa-eye" aria-hidden="true"></i> &nbsp;View</a></td>
+                                </tr>
+                                <tr >
+                                    <td class="text-center"><img class="img1 fleft img-circle" height="60" width="60" src="assets/img/male.png" /></td>
+                                    <td class="text-center">Aana Abdul Shigalkar</td>
+                                    <td class="text-center">8686868686</td>
+                                    <td class="text-center">Abdulla@sanhitainfotech.com</td>
+                                    <td class="text-center">303</td>
+                                    <td class="text-center">7007</td>                                    
+                                    <td class="text-center">101</td>
+                                    <td class="text-center">606</td>
+                                    <td class="text-center">101</td>    
+                                   <td class="text-center"><a target="_blank"  data-toggle="modal" data-target="#myModal" class="btn btn-primary btn-xs"><i class="fa fa-eye" aria-hidden="true"></i> &nbsp;View</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+      
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title text-center">Assign Key </h4>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="table-responsive">
+                        <table class="table tbl">
+                            <thead>
+                                <tr>                    
+                                    <th class="text-center">License Key</th>
+                                    <th class="text-center">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr >                          
+                                    <td class="text-center">QW45-4KH-5D5D-68LM</td>    
+                                   <td class="text-center"><button class="btn btn-primary btn-xs"> &nbsp;Assign</button></td>
+                                </tr>
+                                <tr >                          
+                                    <td class="text-center">QW45-4KH-5D5D-68LM</td>    
+                                    <td class="text-center"><button class="btn btn-primary btn-xs"> &nbsp;Assign</button></td>
+                                </tr>
+                             
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+        
+      </div>
+    </div>

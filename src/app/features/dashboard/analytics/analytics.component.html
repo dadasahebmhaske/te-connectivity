@@ -1,0 +1,217 @@
+
+<div class="container-fluid">
+    
+            <div class="row">
+                <form >
+                  
+                    <div class="col-sm-2">
+                        <div class="form-group has-feedback">
+                            <input type="text" class="form-control" placeholder="From Date" onkeydown="return false" required>
+                            <span class="glyphicon glyphicon-calendar form-control-feedback" aria-hidden="true"></span>
+                        </div>
+                    </div>
+            
+                    <div class="col-sm-1">
+                        <button class="btn btn-primary" ><i class="fa fa-arrow-circle-o-right"></i> Go</button>
+                        <button type="button" name="" class="btn btn-primary" *ngIf="false">
+                            <i class="fa fa-cog fa-spin fa-fw" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+    
+    
+        <div class="dash-box">
+            <div class="row box-layout">
+                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                   
+                        <div class="info-box bg-pink hover-expand-effect">
+                            <div class="icon">                             
+                                <img src="assets/img/customer.png" />
+                            </div>
+                            <div class="content">
+                                <div class="text">User Count</div>
+                                <div class="number count-to" >55</div>
+                            </div>
+                        </div>
+                  
+                </div>
+                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                   
+                        <div class="info-box bg-purple  hover-expand-effect">
+                            <div class="icon">
+                                <img src="assets/img/weighing-scale.svg" />
+                            </div>
+                            <div class="content">
+                                <div class="text">Delivery Boy Count</div>
+                                <div class="number count-to" >77</div>
+                            </div>
+                        </div>
+                  
+                </div>
+                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                   
+                        <div class="info-box bg-blue  hover-expand-effect">
+                            <div class="icon">
+                                <img src="assets/img/square.svg" />
+                            </div>
+                            <div class="content">
+                                <div class="text">Total Weight Count</div>
+                                <div class="number count-to">66</div>
+                            </div>
+                        </div>
+                   
+                </div>
+        
+                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                  
+                        <div class="info-box bg-red hover-expand-effect">
+                            <div class="icon">
+                                <img src="assets/img/lessw.svg" />
+                            </div>
+                            <div class="content">
+                                <div class="text"> Excess Weight Count</div>
+                                <div class="number count-to">56</div>
+                            </div>
+                        </div>
+                  
+                </div>
+                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                   
+                        <div class="info-box bg-green hover-expand-effect">
+                            <div class="icon">
+                                <img src="assets/img/weight-balance.svg" />
+                            </div>
+                            <div class="content">
+                                <div class="text"> Equal Weight Count</div>
+                                <div class="number count-to" >54504</div>
+                            </div>
+                        </div>
+                  
+                </div>
+                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                   
+                        <div class="info-box bg-red hover-expand-effect">
+                            <div class="icon">
+                                <img src="assets/img/less.svg" />
+                            </div>
+                            <div class="content">
+                                <div class="text"> Less Weight Count</div>
+                                <div class="number count-to">0022</div>
+                            </div>
+                        </div>                  
+                </div>
+            </div>    
+        </div>
+     
+        <div class="dash-box">
+            <div class="row">
+                <div class="col-sm-12">
+                        <ui-grid [data]="custData" [gridOptions]="gridOptions" (onEdit)="onEditFunction($event)"></ui-grid>
+                    <!-- <div class="table-responsive">
+                        <table class="table tbl">
+                            <thead>
+                                <tr>
+                                    <th class="text-center"><img class="img1 fleft img-circle" height="60" width="60" src="assets/img/male.png" /></th>
+                                    <th class="text-center">Delivery <br />Boy Name</th>
+                                    <th class="text-center">Mobile <br> No.</th>
+                                    <th class="text-center">Email <br />Id </th>
+                                    <th class="text-center">Total <br>Event</th>
+                                    <th class="text-center">Total <br>Count</th>
+                                    <th class="text-center">Less<br /> Count</th>
+                                    <th class="text-center">Equal <br />Count</th>
+                                    <th class="text-center">Excess <br />Count</th>
+                          
+                                   <th class="text-center">Details</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr >
+                                    <td class="text-center"><img class="img1 fleft img-circle" height="60" width="60" src="assets/img/male.png" /></td>
+                                    <td class="text-center">Abdul Shigalkar</td>
+                                    <td class="text-center">8686868686</td>
+                                    <td class="text-center">Abdulla@sanhitainfotech.com</td>
+                                    <td class="text-center">303</td>
+                                    <td class="text-center">7007</td>                                    
+                                    <td class="text-center">101</td>
+                                    <td class="text-center">606</td>
+                                    <td class="text-center">101</td>    
+                                   <td class="text-center"><a target="_blank"  data-toggle="modal" data-target="#myModal" class="btn btn-primary btn-xs"><i class="fa fa-eye" aria-hidden="true"></i> &nbsp;View</a></td>
+                                </tr>
+                                <tr >
+                                    <td class="text-center"><img class="img1 fleft img-circle" height="60" width="60" src="assets/img/male.png" /></td>
+                                    <td class="text-center">Hanna Abdul Shigalkar</td>
+                                    <td class="text-center">8686868686</td>
+                                    <td class="text-center">Abdulla@sanhitainfotech.com</td>
+                                    <td class="text-center">303</td>
+                                    <td class="text-center">7007</td>                                    
+                                    <td class="text-center">101</td>
+                                    <td class="text-center">606</td>
+                                    <td class="text-center">101</td>    
+                                   <td class="text-center"><a target="_blank"  data-toggle="modal" data-target="#myModal" class="btn btn-primary btn-xs"><i class="fa fa-eye" aria-hidden="true"></i> &nbsp;View</a></td>
+                                </tr>
+                                <tr >
+                                    <td class="text-center"><img class="img1 fleft img-circle" height="60" width="60" src="assets/img/male.png" /></td>
+                                    <td class="text-center">Aana Abdul Shigalkar</td>
+                                    <td class="text-center">8686868686</td>
+                                    <td class="text-center">Abdulla@sanhitainfotech.com</td>
+                                    <td class="text-center">303</td>
+                                    <td class="text-center">7007</td>                                    
+                                    <td class="text-center">101</td>
+                                    <td class="text-center">606</td>
+                                    <td class="text-center">101</td>    
+                                   <td class="text-center"><a target="_blank"  data-toggle="modal" data-target="#myModal" class="btn btn-primary btn-xs"><i class="fa fa-eye" aria-hidden="true"></i> &nbsp;View</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+      
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title text-center">Assign Key </h4>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="table-responsive">
+                        <table class="table tbl">
+                            <thead>
+                                <tr>                    
+                                    <th class="text-center">License Key</th>
+                                    <th class="text-center">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr >                          
+                                    <td class="text-center">QW45-4KH-5D5D-68LM</td>    
+                                   <td class="text-center"><button class="btn btn-primary btn-xs"> &nbsp;Assign</button></td>
+                                </tr>
+                                <tr >                          
+                                    <td class="text-center">QW45-4KH-5D5D-68LM</td>    
+                                    <td class="text-center"><button class="btn btn-primary btn-xs"> &nbsp;Assign</button></td>
+                                </tr>
+                             
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+        
+      </div>
+    </div>

@@ -1,0 +1,27 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<h1 [ngClass]="{one:classcheck,two:!classcheck}">
+  Angular 4 Ui grid Using angular js
+ </h1>
+ <p  [ngStyle]="{color:classcheck==true?'blue':'red'}">
+ Ui grid Using custom data
+ </p>
+ 
+
+ <div class="panel panel-default">
+   <div class="panel-body">
+     <div class="row">
+       <div class="col-sm-6">
+          <ui-grid [data]="employee" [gridOptions]="gridOptions" (onEdit)="onEditFunction($event)"></ui-grid>
+       </div>
+       <div class="col-sm-6">
+          <ui-grid [data]="addEmp" [gridOptions]="gridOption" (onDelete)="onDeleteFunction($event)"></ui-grid>
+       </div>
+       <div class="col-sm-12 text-center"><br>
+        <button (click)="getRow()" class="btn btn-primary text-center">Add Rows</button>
+       </div>
+     </div>
+  
+   </div>
+ </div>
+ 
+ 
