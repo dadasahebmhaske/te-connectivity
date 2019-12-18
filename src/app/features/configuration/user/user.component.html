@@ -1,0 +1,105 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-6 col-sm-offset-3">
+            <header class="header_title">
+                <p>User</p>
+            </header>
+            <div class="well">
+                <form>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label>Name
+                                    <span class="errorMessage" style="color:red;">*</span>
+                                </label>
+                                <input type="text" class="form-control" placeholder="Enter Name" required />
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label>Email
+                                    <span class="errorMessage" style="color:red;">*</span>
+                                </label>
+                                <input type="text" class="form-control" placeholder="Enter Email" required />
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label>Mobile No.
+                                        <span class="errorMessage" style="color:red;">*</span>
+                                    </label>
+                                    <input type="text" class="form-control" placeholder="Enter Mobile No." required />
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label>Password
+                                        <span class="errorMessage" style="color:red;">*</span>
+                                    </label>
+                                    <input type="password" class="form-control" placeholder="Enter Password" required />
+    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label>Layer
+                                            <span class="errorMessage" style="color:red;">*</span>
+                                        </label>
+                                        <select class="form-control">
+                                            <option selected hidden>-- Select Layer --</option>
+                                            <option>Layer 1</option>
+                                            <option>Layer 2</option>
+                                            <option>Layer 3</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label>Plant
+                                                <span class="errorMessage" style="color:red;">*</span>
+                                            </label>
+                                            <select class="form-control">
+                                                <option selected hidden>-- Select Plant --</option>
+                                                <option>Plant 1</option>
+                                                <option>Plant 2</option>
+                                                <option>Plant 3</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label>Designation
+                                                    <span class="errorMessage" style="color:red;">*</span>
+                                                </label>
+                                                <select class="form-control">
+                                                    <option selected hidden>-- Select Designation --</option>
+                                                    <option>Auditor</option>
+                                                    <option>Supervisor</option>
+                                                    <option>QA</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                         
+                            </div>
+                    <hr class="hr_basic" />
+                    <div class="row ">
+                        <div class="col-sm-12 ">
+                            <a routerLink="/configuration/user-list" class="btn btn-default pull-right" style="margin-left:10px;">
+                                <i class="glyphicon glyphicon-arrow-left"></i> &nbsp;&nbsp;Back
+                            </a>
+                            <button class=" btn btn-primary btn-right pull-right" type="submit">
+                                <i class="glyphicon glyphicon-send"></i> &nbsp;&nbsp;Submit
+                            </button>
+
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

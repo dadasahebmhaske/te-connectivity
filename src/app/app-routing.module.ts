@@ -50,6 +50,11 @@ const routes: Routes = [
         //loadChildren: "./features/setting/setting.module#SettingModule",
          loadChildren: () => import('./features/transaction/transaction.module').then(t => t.TransactionModule) 
         
+      }, 
+       {
+        path: "configuration",
+         loadChildren: () => import('./features/configuration/configuration.module').then(c => c.ConfigurationModule) 
+        
       },    
    ]
    },
