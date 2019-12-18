@@ -6,9 +6,14 @@
                 <p>Plant </p>
             </header>
             <div class="well outer-box">
+                <div class="row">
                 <div class="col-sm-12">
                     <a routerLink="/master/Plant"><button class="btn btn-primary pull-right" >  <span class="glyphicon glyphicon-plus"></span> Add</button></a>
                   
+                </div>
+                <div class="col-sm-12"><br>
+                        <ui-grid [data]="custData" [gridOptions]="gridOptions" (onEdit)="onEditFunction($event)"></ui-grid>
+                </div>
                 </div>
             </div>
         </div>

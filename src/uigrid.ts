@@ -71,12 +71,12 @@ export function initUiGrid() {
 
         exporterCsvLinkElement: angular.element(document.querySelectorAll(".custom-csv-link-location")),
         onRegisterApi: function (gridApi) {
-          $scope.gridApi = gridApi;
-          gridApi.selection.on.rowSelectionChanged($scope,function(row){
-            var msg = 'row selected ' + row.isSelected;
-         console.log('slected from grid'+ $scope.gridApi.selection.getSelectedRows());
-         sessionStorage.row=JSON.stringify($scope.gridApi.selection.getSelectedRows());
-          });
+        //   $scope.gridApi = gridApi;
+        //   gridApi.selection.on.rowSelectionChanged($scope,function(row){
+        //     var msg = 'row selected ' + row.isSelected;
+        //  console.log('slected from grid'+ $scope.gridApi.selection.getSelectedRows());
+        //  sessionStorage.row=JSON.stringify($scope.gridApi.selection.getSelectedRows());
+        //   });
          
         },
        
@@ -147,7 +147,7 @@ export function initUiGrid() {
       this.$onInit = function() {}
 
     }],
-    template: '<div ui-grid="gridOptions" ui-grid-selection ui-grid-resize-columns ui-grid-exporter ui-grid-auto-resize ui-grid-pagination class="grid" style="width:100%;"></div>'
+    template: '<div ui-grid="gridOptions"  ui-grid-resize-columns ui-grid-exporter ui-grid-auto-resize ui-grid-pagination class="grid" style="width:100%;"></div>'
   };
   return angular.module('uigridmodule', ['ui.grid',  'ui.grid.selection','ui.grid.exporter','ui.grid.pagination'])
     .component('ui-grid', uiGridComponent)
