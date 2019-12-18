@@ -3,24 +3,34 @@
     <div class="row">
         <div class="col-sm-6 col-sm-offset-3">
             <header class="header_title">
-                <p>Plant</p>
+                <p>Sub section</p>
             </header>
             <div class="well">
                 <form >
                     <div class="row">
-                        <div class="col-sm-12">
+                            <div class="col-sm-4">
+                                    <div class="form-group">
+                                        <label> Section <span class="errorMessage" style="color:red;">*</span></label>
+                                       
+                                  <select class="cleanSelect form-control" id="lng"   required>
+                                        <option value="">--Section Section--</option>
+                              </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-8">
                             <div class="form-group">
-                                <label>Plant Name<span class="errorMessage" style="color:red;">*</span></label>
+                                <label>Sub Section Name<span class="errorMessage" style="color:red;">*</span></label>
                                
-                                    <input type="text" class="form-control" placeholder="Enter Plant Name" required />                                  
+                                    <input type="text" class="form-control" placeholder="Enter Sub Section Name" required />                                  
                               
                             </div>
                         </div>
+                  
                     </div>
                     <hr class="hr_basic" />
                     <div class="row ">
                         <div class="col-sm-12 ">
-                            <a routerLink="/master/Plant-list" class="btn btn-default pull-right" style="margin-left:10px;">
+                            <a routerLink="/master/sub-section-list" class="btn btn-default pull-right" style="margin-left:10px;">
                                 <i class="glyphicon glyphicon-arrow-left"></i> &nbsp;&nbsp;Back
                             </a>
                             <button class=" btn btn-primary btn-right pull-right" type="submit"  >
