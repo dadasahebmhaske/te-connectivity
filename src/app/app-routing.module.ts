@@ -55,7 +55,12 @@ const routes: Routes = [
         path: "configuration",
          loadChildren: () => import('./features/configuration/configuration.module').then(c => c.ConfigurationModule) 
         
-      },    
+      },   
+      {
+        path: "menu",
+         loadChildren: () => import('./features/menu/menu.module').then(c => c.MenuModule) 
+        
+      },   
    ]
    },
   //  {
