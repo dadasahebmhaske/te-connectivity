@@ -23,3 +23,7 @@ label {
 .outer-box{
     min-height:200px;
 }
+
+.navbar{
+    border-radius:0!important;
+}
