@@ -47,7 +47,8 @@ export class AuditListComponent implements OnInit {
   }
   onActionFunction = ($event) =>{
     console.log($event);
-  //  / AppComponent.router.navigate(['/transaction/audit-trans']);
+
+  AppComponent.router.navigate(['/transaction/audit-trans']);
   }
 
   // onSubmit(){
