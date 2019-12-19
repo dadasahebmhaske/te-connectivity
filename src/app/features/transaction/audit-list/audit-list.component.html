@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-sm-12 ">
             <header class="header_title">
-                <p>Audit</p>
+                <p>Audit Question</p>
             </header>
             <div class="well outer-box">
                 <div class="row">
@@ -14,6 +14,7 @@
                             </select>
                         </div>
                     </div>
+<<<<<<< HEAD
                     <div class="col-sm-10">
                         <a routerLink="/transaction/audit">
                             <button class="btn btn-primary pull-right">
@@ -27,6 +28,14 @@
                     <div class="col-sm-12">
                         <ui-grid [data]="custData" [gridOptions]="gridOptions" (onEdit)="onEditFunction($event)"></ui-grid>
                     </div>
+=======
+                <div class="col-sm-10">
+                    <a routerLink="/transaction/audit"><button class="btn btn-primary pull-right" >  <span class="glyphicon glyphicon-plus"></span> Add</button></a>
+                  
+                </div>
+                <div class="col-sm-12">
+                        <ui-grid [data]="custData" [gridOptions]="gridOptions" (onEdit)="onEditFunction($event)" (onAction)="onActionFunction($event)"></ui-grid>
+>>>>>>> 1c82d76857366a9d886a1757f2df3edef193a2c7
                 </div>
             </div>
         </div>

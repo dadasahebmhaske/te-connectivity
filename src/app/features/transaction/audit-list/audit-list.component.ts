@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { IGridColumnDefs, IGridoption } from '../../../interface/igridoption';
+import {AppComponent} from 'src/app/app.component';
 declare var $: any;
 @Component({
   selector: 'app-audit-list',
@@ -44,6 +45,10 @@ export class AuditListComponent implements OnInit {
    // alert('City: '+$event.City+', Designation: '+$event.Designation+', ID: '+$event.ID+', Name: '+$event.Name)
     $('#myModal').modal('show');
   }
+  onActionFunction = ($event) =>{
+    console.log($event);
+  //  / AppComponent.router.navigate(['/transaction/audit-trans']);
+  }
 
   // onSubmit(){
  
@@ -80,6 +85,11 @@ export class AuditListComponent implements OnInit {
     , width: "48",
       headerCellTemplate: '<div style="text-align: center;margin-top: 30px;">Delete</div>', enableFiltering: false
   },
+  {
+    name: 'Action', displayName: 'Action', cellTemplate: '<button  style="margin:3px;" class="btn-info btn-xs"  ng-click="grid.appScope.onActionFunction(row.entity)"  data-title="Close" "> <span class="glyphicon glyphicon-play-circle"></span></button> '
+  , width: "48",
+    headerCellTemplate: '<div style="text-align: center;margin-top: 30px;">Action</div>', enableFiltering: false
+},
      
        { name: 'plan', displayName: 'Plan', width:"*", cellTooltip: true,filterCellFiltered: true},
        { name: 'Section', displayName: 'Section', width:"*", cellTooltip: true,filterCellFiltered: true},
