@@ -7,6 +7,7 @@ import {TransactionDirective} from '../../directive/transaction.directive';
 
 
 
+
 @NgModule({
   declarations: [compArray,TransactionDirective],
   imports: [

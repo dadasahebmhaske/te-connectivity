@@ -1,4 +1,3 @@
-
 <div class="container-fluid">
     <div class="row">
         <div class="col-sm-12 ">
@@ -7,24 +6,29 @@
             </header>
             <div class="well outer-box">
                 <div class="row">
-                        <div class="col-sm-2">
-                                <div class="form-group">
-                              <select class="cleanSelect form-control" id="lng"   required>
-                                    <option value="">Active</option>
-                                    <option value="">Deleted</option>
-                          </select>
+                    <div class="col-sm-2">
+                        <div class="form-group">
+                            <select class="cleanSelect form-control" id="lng" required>
+                                <option value="">Active</option>
+                                <option value="">Deleted</option>
+                            </select>
                         </div>
                     </div>
-                <div class="col-sm-10">
-                    <a routerLink="/transaction/audit"><button class="btn btn-primary pull-right" >  <span class="glyphicon glyphicon-plus"></span> Add</button></a>
-                  
-                </div>
-                <div class="col-sm-12">
+                    <div class="col-sm-10">
+                        <a routerLink="/transaction/audit">
+                            <button class="btn btn-primary pull-right">
+                                <span class="glyphicon glyphicon-plus"></span> Add</button>
+                        </a>
+                        <a routerLink="/transaction/audit-trans">
+                            <button class="btn btn-warning pull-right">
+                                <span class="glyphicon glyphicon-plus"></span> Audit transaction</button>
+                        </a>
+                    </div>
+                    <div class="col-sm-12">
                         <ui-grid [data]="custData" [gridOptions]="gridOptions" (onEdit)="onEditFunction($event)"></ui-grid>
+                    </div>
                 </div>
-            </div>
             </div>
         </div>
     </div>
 </div>
-
