@@ -3,7 +3,7 @@
     <div class="row">
         <div class="col-sm-12 ">
             <header class="header_title">
-                <p>Audit</p>
+                <p>Audit Question</p>
             </header>
             <div class="well outer-box">
                 <div class="row">
@@ -20,7 +20,7 @@
                   
                 </div>
                 <div class="col-sm-12">
-                        <ui-grid [data]="custData" [gridOptions]="gridOptions" (onEdit)="onEditFunction($event)"></ui-grid>
+                        <ui-grid [data]="custData" [gridOptions]="gridOptions" (onEdit)="onEditFunction($event)" (onAction)="onActionFunction($event)"></ui-grid>
                 </div>
             </div>
             </div>

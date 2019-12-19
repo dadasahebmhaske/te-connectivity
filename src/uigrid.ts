@@ -10,6 +10,7 @@ export function initUiGrid() {
       data: '<',
       onEdit: '&',
       onDelete: '&',
+      onAction: '&',
       gridOptions: '='
     },
     transclude: true,
@@ -94,6 +95,15 @@ export function initUiGrid() {
       } ;
       $scope.deleteEmployee = function(row){
         ctrl.onDelete({
+          // "City":row.City,
+          // "Designation":row.Designation,
+          // "ID":row.ID,
+          // "Name":row.Name
+          row
+        });
+      } 
+      $scope.onActionFunction= function(row){
+        ctrl.onAction({
           // "City":row.City,
           // "Designation":row.Designation,
           // "ID":row.ID,

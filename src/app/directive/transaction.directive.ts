@@ -14,6 +14,8 @@ import {
     @Input() data: {};
     @Input() gridOptions : {};
     @Output() onEdit: EventEmitter<{}>;
+    @Output() onAction: EventEmitter<{}>;
+    
   
     constructor(elementRef: ElementRef, injector: Injector) {
       console.log('report grid');
