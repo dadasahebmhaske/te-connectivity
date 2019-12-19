@@ -67,12 +67,17 @@ export class PlantMasterListComponent implements OnInit {
 
     let  columnDefs=[];
     columnDefs=[
-       {
-         name: 'Select', displayName: 'Details', cellTemplate: '<button  style="margin:3px;" class="btn-primary btn-xs"  ng-click="grid.appScope.editEmployee(row.entity)"  data-title="Close" ">&nbsp;Edit&nbsp;</button> '
-       , width: "48",
-         headerCellTemplate: '<div style="text-align: center;margin-top: 30px;">Edit</div>', enableFiltering: false
-     },
-       { name: 'plantID', displayName: 'Plant Id', width:"*", cellTooltip: true,filterCellFiltered: true},
+      {
+        name: 'Select', displayName: 'Details', cellTemplate: '<button  style="margin:3px;" class="btn-primary btn-xs"  ng-click="grid.appScope.editEmployee(row.entity)"  data-title="Close" "> <span class="glyphicon glyphicon-pencil"></span></button> '
+      , width: "48",
+        headerCellTemplate: '<div style="text-align: center;margin-top: 30px;">Edit</div>', enableFiltering: false
+    },
+    {
+     name: 'Delete', displayName: 'Delete', cellTemplate: '<button  style="margin:3px;" class="btn-danger btn-xs"  ng-click="grid.appScope.editEmployee(row.entity)"  data-title="Close" "> <span class="glyphicon glyphicon-trash"></span></button> '
+   , width: "48",
+     headerCellTemplate: '<div style="text-align: center;margin-top: 30px;">Delete</div>', enableFiltering: false
+ },
+      // { name: 'plantID', displayName: 'Plant Id', width:"*", cellTooltip: true,filterCellFiltered: true},
        { name: 'Name', displayName: 'Plant Name', width:"*", cellTooltip: true,filterCellFiltered: true},
          
        // { name: 'IsActive', displayName: 'Active', width: "70", cellTooltip: true, filterCellFiltered: true},   

@@ -69,10 +69,15 @@ export class UserListComponent implements OnInit {
     let  columnDefs=[];
     columnDefs=[
        {
-         name: 'Select', displayName: 'Details', cellTemplate: '<button  style="margin:3px;" class="btn-primary btn-xs"  ng-click="grid.appScope.editEmployee(row.entity)"  data-title="Close" ">&nbsp;Edit&nbsp;</button> '
+         name: 'Select', displayName: 'Details', cellTemplate: '<button  style="margin:3px;" class="btn-primary btn-xs"  ng-click="grid.appScope.editEmployee(row.entity)"  data-title="Close" "><span class="glyphicon glyphicon-pencil"></span></button> '
        , width: "48",
          headerCellTemplate: '<div style="text-align: center;margin-top: 30px;">Edit</div>', enableFiltering: false
      },
+     {
+      name: 'Delete', displayName: 'Delete', cellTemplate: '<button  style="margin:3px;" class="btn-danger btn-xs"  ng-click="grid.appScope.editEmployee(row.entity)"  data-title="Close" "> <span class="glyphicon glyphicon-trash"></span></button> '
+    , width: "48",
+      headerCellTemplate: '<div style="text-align: center;margin-top: 30px;">Delete</div>', enableFiltering: false
+  },
        { name: 'Name', displayName: 'Name', width:"*", cellTooltip: true,filterCellFiltered: true},
        { name: 'Email', displayName: 'Email', width:"*", cellTooltip: true,filterCellFiltered: true},
        { name: 'Mobile', displayName: 'Mobile No.', width:"*", cellTooltip: true,filterCellFiltered: true},
