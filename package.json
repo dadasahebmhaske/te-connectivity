@@ -25,7 +25,7 @@
     "angular-ui-grid": "^4.4.7",
     "bootstrap": "^3.3.7",
     "jquery": "^3.4.1",
-    "jszip": "^2.6.1",
+    "jszip": "^2.7.0",
     "lodash": "^4.17.15",
     "ngx-bootstrap": "^5.1.2",
     "ngx-toastr": "^10.1.0",
